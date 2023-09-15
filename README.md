@@ -6,7 +6,6 @@
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Demo](#demo)
-- [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
   - [Installation](#installation)
@@ -19,15 +18,6 @@ Welcome to LPL's Orbitfy Dashboard, an interactive dashboard for managing and an
 ## Demo
 
 https://d3jq6hipq6zlyl.cloudfront.net/
-
-## Features
-
-List the key features of your project. Use bullet points for easy readability.
-
-- Feature 1
-- Feature 2
-- Feature 3
-...
 
 ## Technologies Used
 
