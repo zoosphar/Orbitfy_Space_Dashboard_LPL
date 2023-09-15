@@ -3,12 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@aws-amplify/ui-react": "^5.2.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@material-tailwind/react": "^2.1.1",
+    "@mui/material": "^5.14.5",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "amazon-cognito-identity-js": "^6.3.5",
+    "aws-amplify": "^5.3.10",
+    "aws-sdk": "^2.1450.0",
+    "googleapis": "^126.0.1",
+    "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^18.2.0",
+    "react-drag-drop-files": "^2.3.10",
+    "react-google-button": "^0.7.2",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.10.1",
+    "react-query": "^3.39.3",
+    "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
+    "react-social-login-buttons": "^3.9.1",
+    "react-use-websocket": "^4.3.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +55,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
   }
 }
