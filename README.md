@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# LPL Orbitfy Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Project Logo](https://github.com/LittlePlaceLabs/Orbitfy-LPL-Dashboard/assets/139549023/795f881d-eb05-4e71-adf2-6c9e180880ed)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Demo](#demo)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+- [Deployment](#deployment)
 
-### `npm start`
+## Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Welcome to LPL's Orbitfy Dashboard, an interactive dashboard for managing and analyzing images using Machine Learning. This project provides a user-friendly interface for uploading, selecting, and interacting with images, along with features for data filtering and real-time updates.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Demo
 
-### `npm test`
+https://d3jq6hipq6zlyl.cloudfront.net/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+List the key features of your project. Use bullet points for easy readability.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Feature 1
+- Feature 2
+- Feature 3
+...
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React: The front-end framework for building a dynamic and responsive user interface.
+- Material-UI: A library for creating consistent and aesthetically pleasing UI components.
+- AWS S3: For storing and retrieving image files.
+- WebSocket: Facilitating real-time updates for image management.
+- JWT Authentication: Ensuring secure access to the dashboard.
+- React Query: For efficient data fetching and state management.
+- Lodash: A utility library for simplifying JavaScript operations.
+- MUI Popover: Used for creating filter options.
+- React Hot Toast: For displaying user-friendly notifications.
+- TailwindCSS: for styling and utility classes.
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To get started with Dashboard, follow these simple steps:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Log in using your LPL email.
+- Upload images for analysis or comparison.
+- Use the image selector pane to explore and interact with images.
+- Filter images by model name to streamline your analysis.
+- Enjoy real-time updates via WebSocket connections.
+- Utilize the image comparison view and metrics table for detailed insights.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Run `npm install` to install all the required packages for the project.
+- Then run `npm start` to fire up a local server.
+- Go to `http://localhost:3000` from your browser.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Run `npm run build` command in the root of the project
+- Take the build file and upload it to the `dev-lpl-dash-hosted` bucket in AWS S3
+- Go to cloudfront and open the instance which have `dev-lpl-dash-hosted` as origin.
+- Now go to `Invalidations` Tab in that Cloudfront instance
+- Create New Invalidation and type `/*` in the Add Object Paths text field.
+- Now wait for the invalidation to complete and then refresh the Cloudfront URL.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
