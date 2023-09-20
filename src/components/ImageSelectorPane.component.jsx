@@ -6,6 +6,7 @@ import OutlinedStar from "../static/img/outlined-star.svg";
 import RemoveIcon from "../static/img/remove.png";
 import {
   Checkbox,
+  Divider,
   FormControlLabel,
   FormGroup,
   Popover,
@@ -72,7 +73,7 @@ function ImageSelectorPane({
           onMouseLeave={() => setFavoritedIndex(null)}
         >
           <img
-            className={`h-5 absolute top-[-6px] right-14 cursor-pointer ${
+            className={`h-5 absolute top-[-6px] left-[-7px] cursor-pointer ${
               favoritedIndex === index ? "opacity-100" : "opacity-0"
             }`}
             alt="delete bin icon"
@@ -82,7 +83,7 @@ function ImageSelectorPane({
           />
           <img
             onClick={() => handleSelectImage(image, index, "recent")}
-            className={`object-cover rounded h-[75px] mb-4 cursor-pointer w-full ${
+            className={`object-cover rounded mb-4 cursor-pointer w-full aspect-square ${
               index === selectedImageIndex &&
               selectedImageType === "recent" &&
               "border-4 border-[#6b38fa] border-solid"
@@ -92,7 +93,7 @@ function ImageSelectorPane({
             key={get(image, "file_key", index)}
           />
           <img
-            className={`h-7 absolute rotate-45 top-[-12px] left-14 cursor-pointer ${
+            className={`h-7 absolute rotate-45 top-[-12px] right-[-14px] cursor-pointer ${
               favoritedIndex === index ? "opacity-100" : "opacity-0"
             }`}
             alt="Ic round star"
@@ -113,20 +114,18 @@ function ImageSelectorPane({
           key={get(image, "file_key", index)}
         >
           <img
-            className="h-10 absolute top-[-18px] left-12 cursor-pointer"
+            className="h-10 absolute top-[-18px] right-[-17px] cursor-pointer"
             alt="Ic round star"
             src={StarIcon}
             onClick={() => handleRemoveFeatureImage(image, index)}
           />
           <img
-            className={`object-cover rounded h-[75px] w-full ${
+            className={`object-cover rounded w-full aspect-square ${
               index === selectedImageIndex &&
               selectedImageType === "featured" &&
               "border-4 border-[#6b38fa] border-solid"
             }`}
             alt="Unsplash gvptkmonylk"
-            height={100}
-            width={100}
             src={get(image, "original", "")}
             onClick={() => handleSelectImage(image, index, "featured")}
           />
@@ -250,14 +249,14 @@ function ImageSelectorPane({
             </Popover>
           </div>
           {/* Feature Images */}
-          <div className="px-2">{featuredImagesRenderer}</div>
+          <div className="">{featuredImagesRenderer}</div>
           {/* Seperator */}
           {!isEmpty(featuredImagesRenderer) && (
-            <img className="vector mt-3" alt="Vector" src={SepearatorIcon} />
+            <Divider className=" bg-gray-500" />
           )}
 
           {/* Recent Images */}
-          <div className="px-2 flex flex-col justify-start items-center mt-4 pt-3">
+          <div className="flex flex-col justify-start items-center pt-4">
             {recentImagesRenderer}
           </div>
         </>

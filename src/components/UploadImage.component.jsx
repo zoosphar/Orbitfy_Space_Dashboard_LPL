@@ -147,7 +147,7 @@ function UploadImage({ modelNameArray }) {
     <>
       <button
         onClick={() => setIsModalVisible(true)}
-        className="bg-[#FFC000] px-4 py-2 text-black rounded h-8 text-sm w-full flex items-center font-semibold"
+        className="bg-[#FFC000] px-4 py-2 text-black rounded h-8 text-sm w-full justify-center flex items-center font-semibold"
       >
         <FaPlus size={18} color="black" /> &nbsp; Upload
       </button>
