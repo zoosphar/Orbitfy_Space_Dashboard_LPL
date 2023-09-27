@@ -45,8 +45,8 @@ const CssTextField = styled(TextField)({
 
 AWS.config.update({
   region: "us-east-1", // e.g., 'us-east-1'
-  accessKeyId: "AKIAR2GFTUBK7PXHQBG5",
-  secretAccessKey: "70X7NKLqP8gOMVboet+aIXYxKzPLavtrHfxTziU3",
+  accessKeyId: "AKIAXNSGGXPRACC3E77Q",
+  secretAccessKey: "1UPiBtKNiHL0ZCX5w2kUqkdhvZEclfdoQ3In4o8L",
 });
 
 const s3 = new AWS.S3({
@@ -129,7 +129,7 @@ function UploadImage({ modelNameArray }) {
       );
     } catch (error) {
       console.error("Error uploading image:", error);
-      alert("Failed to upload the image.");
+      toast.error("Error uploading image");
     } finally {
       setUploadingImage(false);
       setUploadProgress("0%");
